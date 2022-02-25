@@ -1,4 +1,12 @@
 
+MBTilesCpp
+==========
+
+A C++ MBTiles API.
+
+Command line interface
+----------------------
+
 mbtiles-cli list
 
 mbtiles-cli create -f world.mbtiles
@@ -7,16 +15,16 @@ mbtiles-cli import -f world.mbtiles -d tms
 
 mbtiles-cli export -f world.mbtiles -d tms
 
-info
+mbtiles-cli info -f world.mbtiles
 
-metadata-get
+mbtiles-cli metadata-get -f world.mbtiles -n name
 
-metadata-set
+mbtiles-cli metadata-set -f world.mbtiles -n name -v World
 
-metadata-list
+mbtiles-cli metadata-list -f world.mbtiles
 
-tile-get
+mbtiles-cli tile-get -f world.mbtiles -z 0 -c 1 -r 1 -o 1.jpeg
 
-tile-set
+mbtiles-cli tile-set -f world.mbtiles -z 0 -c 1 -r 1 -t 1.jpeg
 
-tile-delete
+mbtiles-cli tile-delete -f world.mbtiles -z 0 -c 1 -r 1
