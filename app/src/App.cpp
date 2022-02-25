@@ -6,6 +6,7 @@
 #include "CreateCommand.hpp"
 #include "ExportCommand.hpp"
 #include "ImportCommand.hpp"
+#include "InfoCommand.hpp"
 
 int main(int argc, char *argv[]) {
 
@@ -25,6 +26,9 @@ int main(int argc, char *argv[]) {
     
     ImportCommand importCommand(&app);
     commands.add(&importCommand);
+
+    InfoCommand infoCommand(&app);
+    commands.add(&infoCommand);
 
     CLI11_PARSE(app, argc, argv);
 

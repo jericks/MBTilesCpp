@@ -6,6 +6,7 @@ add_library(MBTilesCppAppLib STATIC
 	src/ListCommand.cpp
 	src/CreateCommand.cpp
 	src/ExportCommand.cpp
+	src/InfoCommand.cpp
 	src/ImportCommand.cpp
 )
 target_include_directories(MBTilesCppAppLib PUBLIC "include" "../lib/include" CLI11::CLI11)
