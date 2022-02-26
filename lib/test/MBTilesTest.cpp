@@ -57,7 +57,11 @@ TEST(MBTilesLibTests, mbtiles_export) {
     mbtiles.addTile(mbtiles::Tile(1,1,1,"../../../data/tms/1/1/1.jpeg"));
 
     mbtiles.exportToDirectory("tms");
-    // @TODO Needs EXPECTS
+    EXPECT_TRUE(std::filesystem::exists("tms/0/0/0.jpeg"));
+    EXPECT_TRUE(std::filesystem::exists("tms/1/0/0.jpeg"));
+    EXPECT_TRUE(std::filesystem::exists("tms/1/0/1.jpeg"));
+    EXPECT_TRUE(std::filesystem::exists("tms/1/1/0.jpeg"));
+    EXPECT_TRUE(std::filesystem::exists("tms/1/1/1.jpeg"));
 
     EXPECT_TRUE(std::filesystem::remove(fileName));
 }
@@ -74,7 +78,11 @@ TEST(MBTilesLibTests, mbtiles_import) {
     mbtiles.addTile(mbtiles::Tile(1,1,1,"../../../data/tms/1/1/1.jpeg"));
 
     mbtiles.loadFromDirectory("../../../data/tms");
-    
+    EXPECT_TRUE(mbtiles.getTile(0,0,0));
+    EXPECT_TRUE(mbtiles.getTile(1,0,0));
+    EXPECT_TRUE(mbtiles.getTile(1,0,1));
+    EXPECT_TRUE(mbtiles.getTile(1,1,0));
+    EXPECT_TRUE(mbtiles.getTile(1,1,1));
     
     EXPECT_TRUE(std::filesystem::remove(fileName));
 }

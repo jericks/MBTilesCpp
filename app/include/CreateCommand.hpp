@@ -8,6 +8,15 @@
 class CreateOptions {
     public:
         std::string fileName;
+        std::string name;
+        std::string version;
+        std::string description;
+        std::string attribution;
+        std::string type;
+        std::string format;
+        std::string bounds;
+        std::string minzoom;
+        std::string maxzoom;
 };
 
 class CreateCommand : public Command {

@@ -1,4 +1,5 @@
 add_executable(cli_tests 
+    CreateCommandTest.cpp
     ListCommandTest.cpp
 )
 target_link_libraries(cli_tests 
