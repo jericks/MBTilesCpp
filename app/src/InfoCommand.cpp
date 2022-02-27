@@ -8,12 +8,12 @@ InfoCommand::InfoCommand(CLI::App* app): Command ("info") {
 void InfoCommand::execute(std::istream& istream, std::ostream& ostream) {
     mbtiles::MBTiles mbtiles {options.fileName};
     std::map<std::string,std::string> metadata = mbtiles.getMetadata();
-    std::cout << "Metadata" << "\n";
+    ostream << "Metadata" << "\n";
     for(const auto  &metadatum : metadata) {
-        std::cout << metadatum.first << " = " << metadatum.second << "\n";
+        ostream << metadatum.first << " = " << metadatum.second << "\n";
     }
-    std::cout << "\n" << "Tiles" << "\n";
+    ostream << "\n" << "Tiles" << "\n";
     for(int z = mbtiles.getMinZoom(); z <= mbtiles.getMaxZoom(); ++z) {
-        std::cout << z << " = " << mbtiles.countTiles(z) << "\n";    
+        ostream << z << " = " << mbtiles.countTiles(z) << "\n";    
     }
 }
