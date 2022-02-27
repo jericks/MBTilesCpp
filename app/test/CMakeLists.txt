@@ -1,6 +1,7 @@
 add_executable(cli_tests 
     CreateCommandTest.cpp
     ExportCommandTest.cpp
+    ImportCommandTest.cpp
     ListCommandTest.cpp
     InfoCommandTest.cpp
 )
