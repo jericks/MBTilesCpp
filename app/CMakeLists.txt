@@ -8,6 +8,9 @@ add_library(MBTilesCppAppLib STATIC
 	src/ExportCommand.cpp
 	src/InfoCommand.cpp
 	src/ImportCommand.cpp
+	src/TileGetCommand.cpp
+	src/TileSetCommand.cpp
+	src/TileDeleteCommand.cpp
 )
 target_include_directories(MBTilesCppAppLib PUBLIC "include" "../lib/include" CLI11::CLI11)
 target_compile_features(MBTilesCppAppLib PUBLIC cxx_std_17)

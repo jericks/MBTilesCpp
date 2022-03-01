@@ -4,6 +4,9 @@ add_executable(cli_tests
     ImportCommandTest.cpp
     ListCommandTest.cpp
     InfoCommandTest.cpp
+    TileGetCommandTest.cpp
+    TileSetCommandTest.cpp
+    TileDeleteCommandTest.cpp
 )
 target_link_libraries(cli_tests 
     MBTilesCppAppLib

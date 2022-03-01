@@ -107,4 +107,21 @@ Tiles
 3 = 64
 ```
 
+Get a Tile.
+
+```bash
+% mbtiles-cli tile-get -f world.mbtiles -z 0 -c 1 -r 1 -o 1.jpeg
+```
+
+Add or Update a Tile.
+
+```bash
+% mbtiles-cli tile-set -f world.mbtiles -z 0 -c 1 -r 1 -i 1.jpeg
+```
+
+Delete a Tile.
+
+```bash
+% mbtiles-cli tile-delete -f world.mbtiles -z 0 -c 1 -r 1
+```
 

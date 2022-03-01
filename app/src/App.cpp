@@ -7,6 +7,9 @@
 #include "ExportCommand.hpp"
 #include "ImportCommand.hpp"
 #include "InfoCommand.hpp"
+#include "TileGetCommand.hpp"
+#include "TileSetCommand.hpp"
+#include "TileDeleteCommand.hpp"
 
 int main(int argc, char *argv[]) {
 
@@ -29,6 +32,17 @@ int main(int argc, char *argv[]) {
 
     InfoCommand infoCommand(&app);
     commands.add(&infoCommand);
+
+    // Tile Commands
+
+    TileGetCommand tileGetCommand(&app);
+    commands.add(&tileGetCommand);
+
+    TileSetCommand tileSetCommand(&app);
+    commands.add(&tileSetCommand);
+
+    TileDeleteCommand tileDeleteCommand(&app);
+    commands.add(&tileDeleteCommand);
 
     CLI11_PARSE(app, argc, argv);
 
