@@ -10,6 +10,9 @@
 #include "TileGetCommand.hpp"
 #include "TileSetCommand.hpp"
 #include "TileDeleteCommand.hpp"
+#include "MetadataListCommand.hpp"
+#include "MetadataGetCommand.hpp"
+#include "MetadataDeleteCommand.hpp"
 
 int main(int argc, char *argv[]) {
 
@@ -43,6 +46,17 @@ int main(int argc, char *argv[]) {
 
     TileDeleteCommand tileDeleteCommand(&app);
     commands.add(&tileDeleteCommand);
+
+    // Metadata Commands
+
+    MetadataListCommand metadataListCommand(&app);
+    commands.add(&metadataListCommand);
+
+    MetadataGetCommand metadataGetCommand(&app);
+    commands.add(&metadataGetCommand);
+
+    MetadataDeleteCommand metadataDeleteCommand(&app);
+    commands.add(&metadataDeleteCommand);
 
     CLI11_PARSE(app, argc, argv);
 

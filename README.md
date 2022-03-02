@@ -125,3 +125,30 @@ Delete a Tile.
 % mbtiles-cli tile-delete -f world.mbtiles -z 0 -c 1 -r 1
 ```
 
+List Metadata
+
+```bash
+% mbtiles-cli metadata-list -f world.mbtiles
+attribution = Create with MBTilesCpp
+bounds = -179.99,-85.0511,179.99,85.0511
+description = Tiles
+format = jpeg
+maxzoom = 1
+minzoom = 0
+name = world
+type = base_layer
+version = 1.0
+```
+
+Get Metadata by name
+
+```bash
+% mbtiles-cli metadata-get -f world.mbtiles -n format
+jpeg
+```
+
+Delete Metadata by name
+
+```bash
+% mbtiles-cli metadata-delete -f world.mbtiles -n format
+```

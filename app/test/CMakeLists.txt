@@ -4,6 +4,9 @@ add_executable(cli_tests
     ImportCommandTest.cpp
     ListCommandTest.cpp
     InfoCommandTest.cpp
+    MetadataListCommandTest.cpp
+    MetadataGetCommandTest.cpp
+    MetadataDeleteCommandTest.cpp
     TileGetCommandTest.cpp
     TileSetCommandTest.cpp
     TileDeleteCommandTest.cpp

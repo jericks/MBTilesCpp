@@ -8,6 +8,9 @@ add_library(MBTilesCppAppLib STATIC
 	src/ExportCommand.cpp
 	src/InfoCommand.cpp
 	src/ImportCommand.cpp
+	src/MetadataListCommand.cpp
+	src/MetadataGetCommand.cpp
+	src/MetadataDeleteCommand.cpp
 	src/TileGetCommand.cpp
 	src/TileSetCommand.cpp
 	src/TileDeleteCommand.cpp
