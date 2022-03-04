@@ -14,6 +14,9 @@ add_library(MBTilesCppAppLib STATIC
 	src/TileGetCommand.cpp
 	src/TileSetCommand.cpp
 	src/TileDeleteCommand.cpp
+	src/GridDataDeleteCommand.cpp
+	src/GridDataGetCommand.cpp
+	src/GridDataSetCommand.cpp
 )
 target_include_directories(MBTilesCppAppLib PUBLIC "include" "../lib/include" CLI11::CLI11)
 target_compile_features(MBTilesCppAppLib PUBLIC cxx_std_17)

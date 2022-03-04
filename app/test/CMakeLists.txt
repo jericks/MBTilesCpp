@@ -10,6 +10,9 @@ add_executable(cli_tests
     TileGetCommandTest.cpp
     TileSetCommandTest.cpp
     TileDeleteCommandTest.cpp
+    GridDataGetCommandTest.cpp
+    GridDataSetCommandTest.cpp
+    GridDataDeleteCommandTest.cpp
 )
 target_link_libraries(cli_tests 
     MBTilesCppAppLib

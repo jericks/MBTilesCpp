@@ -144,11 +144,35 @@ Get Metadata by name
 
 ```bash
 % mbtiles-cli metadata-get -f world.mbtiles -n format
-jpeg
+jpegq
 ```
 
 Delete Metadata by name
 
 ```bash
 % mbtiles-cli metadata-delete -f world.mbtiles -n format
+```
+
+Get Grid Data
+
+```bash
+% mbtiles-cli griddata-get -f world.mbtiles -z 0 -c -r 0
+```
+
+Get Grid Data by name
+
+```bash
+% mbtiles-cli griddata-get -f world.mbtiles -z 0 -c -r 0 -n values
+```
+
+Set Grid Data
+
+```bash
+% mbtiles-cli griddata-set -f world.mbtiles -z 0 -c -r 0 -n values -j "[1,2,3,4]"
+```
+
+Delete Grid Data
+
+```bash
+% mbtiles-cli griddata-delete -f world.mbtiles -z 0 -c -r 0 -n values
 ```

@@ -13,6 +13,9 @@
 #include "MetadataListCommand.hpp"
 #include "MetadataGetCommand.hpp"
 #include "MetadataDeleteCommand.hpp"
+#include "GridDataDeleteCommand.hpp"
+#include "GridDataGetCommand.hpp"
+#include "GridDataSetCommand.hpp"
 
 int main(int argc, char *argv[]) {
 
@@ -58,6 +61,17 @@ int main(int argc, char *argv[]) {
     MetadataDeleteCommand metadataDeleteCommand(&app);
     commands.add(&metadataDeleteCommand);
 
+    // Grid Data
+    
+    GridDataGetCommand gridDataGetCommand(&app);
+    commands.add(&gridDataGetCommand);
+
+    GridDataSetCommand gridDataSetCommand(&app);
+    commands.add(&gridDataSetCommand);
+
+    GridDataDeleteCommand gridDataDeleteCommand(&app);
+    commands.add(&gridDataDeleteCommand);
+    
     CLI11_PARSE(app, argc, argv);
 
     for(Command* cmd : commands.get()) {
