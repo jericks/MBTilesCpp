@@ -1,3 +1,4 @@
+[![CI](https://github.com/jericks/MBTilesCpp/actions/workflows/ci.yml/badge.svg)](https://github.com/jericks/MBTilesCpp/actions/workflows/ci.yml)
 
 MBTilesCpp
 ==========
