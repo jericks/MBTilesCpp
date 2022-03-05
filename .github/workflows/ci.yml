@@ -69,17 +69,17 @@ jobs:
       - uses: actions/upload-artifact@v2
         if: ${{ runner.os == 'macOS' }}
         with:
-          name: shp-cli-macos
+          name: mbtiles-cli-macos
           path: build/app/mbtiles-cli
 
       - uses: actions/upload-artifact@v2
         if: ${{ runner.os == 'Linux' }}
         with:
-          name: shp-cli-linux
+          name: mbtiles-cli-linux
           path: build/app/mbtiles-cli
 
       - uses: actions/upload-artifact@v2
         if: ${{ runner.os == 'Windows' }}
         with:
-          name: shp-cli-windows
+          name: mbtiles-cli-windows
           path: build/app/mbtiles-cli.exe
