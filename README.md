@@ -2,7 +2,7 @@
 MBTilesCpp
 ==========
 
-A C++ MBTiles API.  It can create MBTiles databases and load tiles and metadata but it cannot generate the content of tiles.
+A C++ [MBTiles](https://github.com/mapbox/mbtiles-spec) API.  It can create MBTiles databases and load tiles and metadata but it cannot generate the content of tiles.
 
 ```cpp
 mbtiles::MBTiles mbtiles { "world.mbtiles" };
@@ -107,6 +107,8 @@ Tiles
 3 = 64
 ```
 
+**Tile**
+
 Get a Tile.
 
 ```bash
@@ -124,6 +126,8 @@ Delete a Tile.
 ```bash
 % mbtiles-cli tile-delete -f world.mbtiles -z 0 -c 1 -r 1
 ```
+
+**Metadata**
 
 List Metadata
 
@@ -153,6 +157,8 @@ Delete Metadata by name
 % mbtiles-cli metadata-delete -f world.mbtiles -n format
 ```
 
+**Grid Data**
+
 Get Grid Data
 
 ```bash
@@ -175,4 +181,24 @@ Delete Grid Data
 
 ```bash
 % mbtiles-cli griddata-delete -f world.mbtiles -z 0 -c -r 0 -n values
+```
+
+**Grid**
+
+Set a Grid.
+
+```bash
+% mbtiles-cli grid-set -f world.mbtiles -z 0 -c 1 -r 1 -i 1.json
+```
+
+Delete a Grid.
+
+```bash
+% mbtiles-cli grid-delete -f world.mbtiles -z 0 -c 1 -r 1
+```
+
+Get a Grid.
+
+```bash
+% mbtiles-cli grid-get -f world.mbtiles -z 0 -c 1 -r 1 -o 0.json
 ```

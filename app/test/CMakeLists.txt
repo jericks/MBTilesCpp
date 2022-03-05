@@ -13,6 +13,9 @@ add_executable(cli_tests
     GridDataGetCommandTest.cpp
     GridDataSetCommandTest.cpp
     GridDataDeleteCommandTest.cpp
+    GridSetCommandTest.cpp
+    GridDeleteCommandTest.cpp
+    GridGetCommandTest.cpp
 )
 target_link_libraries(cli_tests 
     MBTilesCppAppLib

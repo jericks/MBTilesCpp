@@ -516,7 +516,6 @@ TEST(MBTilesLibTests, mbtiles_update_grid_data) {
     EXPECT_TRUE(std::filesystem::remove(fileName));
 }
 
-
 TEST(MBTilesLibTests, mbtiles_delete_grid_data) {
     const std::string fileName = "tiles.mbtiles";
     mbtiles::MBTiles mbtiles { fileName };

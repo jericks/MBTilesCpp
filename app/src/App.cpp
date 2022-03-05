@@ -16,6 +16,9 @@
 #include "GridDataDeleteCommand.hpp"
 #include "GridDataGetCommand.hpp"
 #include "GridDataSetCommand.hpp"
+#include "GridSetCommand.hpp"
+#include "GridDeleteCommand.hpp"
+#include "GridGetCommand.hpp"
 
 int main(int argc, char *argv[]) {
 
@@ -72,6 +75,17 @@ int main(int argc, char *argv[]) {
     GridDataDeleteCommand gridDataDeleteCommand(&app);
     commands.add(&gridDataDeleteCommand);
     
+    // Grid
+    
+    GridSetCommand gridSetCommand(&app);
+    commands.add(&gridSetCommand);
+
+    GridDeleteCommand gridDeleteCommand(&app);
+    commands.add(&gridDeleteCommand);
+
+    GridGetCommand gridGetCommand(&app);
+    commands.add(&gridGetCommand);
+
     CLI11_PARSE(app, argc, argv);
 
     for(Command* cmd : commands.get()) {
