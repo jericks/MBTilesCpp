@@ -30,8 +30,6 @@ namespace mbtiles {
         return vec;
     }
 
-
-
     std::ostream& operator << (std::ostream& os, const Tile& t) {
         os << "TILE (" << t.zoom << ", " << t.column  << ", " << t.row  << ")";
         return os;

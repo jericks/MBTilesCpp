@@ -41,6 +41,7 @@ TEST(MBTilesLibTests, mbtiles_count_tiles) {
 
     EXPECT_EQ(1, mbtiles.countTiles(0));
     EXPECT_EQ(4, mbtiles.countTiles(1));
+    EXPECT_EQ(5, mbtiles.countTiles());
 
     EXPECT_TRUE(std::filesystem::remove(fileName));
 }

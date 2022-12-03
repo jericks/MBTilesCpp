@@ -47,6 +47,8 @@ namespace mbtiles {
 
             int getMaxZoom();
             
+            int countTiles();
+
             int countTiles(int zoom);
             
             void loadFromDirectory(std::string directory);

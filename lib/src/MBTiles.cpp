@@ -58,6 +58,13 @@ namespace mbtiles {
         return query.getColumn(0).getInt();    
     }
 
+    int MBTiles::countTiles() {
+        SQLite::Database db(fileName, SQLite::OPEN_READWRITE|SQLite::OPEN_CREATE);
+        SQLite::Statement query(db, "select count(*) as tile_count from tiles");
+        query.executeStep();
+        return query.getColumn(0).getInt();    
+    }
+
     void MBTiles::exportToDirectory(std::string directory) {
         std::string format = getMetadatum("format").value_or(Metadatum{"format","png"}).value;  
         std::filesystem::path dir = directory;
