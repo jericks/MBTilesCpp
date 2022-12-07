@@ -7,6 +7,7 @@
 #include <fstream>
 #include <functional>
 #include <filesystem>
+#include <optional>
 #include "SQLiteCpp/SQLiteCpp.h"
 #include "Tile.hpp"
 #include "Metadatum.hpp"
